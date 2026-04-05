@@ -1,17 +1,22 @@
+using System;
+using System.Collections.Generic;
+
 public class BudgetBook
 {
-    private List<Transaction> allItems = new List<Transaction>();
+    // Holds the history of all income and expenses
+    private List<Transaction> history = new List<Transaction>();
 
     public void AddEntry(Transaction t)
     {
-        allItems.Add(t);
+        history.Add(t);
     }
 
     public void PrintHistory()
     {
-        foreach (Transaction t in allItems)
+        Console.WriteLine("\n--- ALL TRANSACTIONS ---");
+        foreach (Transaction t in history)
         {
-            t.Show(); 
+            t.Show(); // Polymorphism will pick the right Show method
         }
     }
 }

@@ -1,6 +1,8 @@
+using System;
+
 public class DebtPayment : Transaction
 {
-    public int debtorId;
+    public int debtorId; // This tracks which person I paid
 
     public DebtPayment(double a, string d, int id) : base(a, d)
     {
@@ -9,6 +11,6 @@ public class DebtPayment : Transaction
 
     public override void Show()
     {
-        Console.WriteLine("DEBT PAY: -" + amount + " for ID " + debtorId);
+        Console.WriteLine("PAID DEBT: -$" + amount + " to ID " + debtorId + " date: " + date);
     }
 }

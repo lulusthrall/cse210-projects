@@ -1,3 +1,5 @@
+using System;
+
 public class Expense : Transaction
 {
     public string category;
@@ -9,6 +11,6 @@ public class Expense : Transaction
 
     public override void Show()
     {
-        Console.WriteLine("EXPENSE: -" + amount + " (" + category + ") on " + date);
+        Console.WriteLine("EXPENSE: -" + amount + " for " + category + " date: " + date);
     }
 }
